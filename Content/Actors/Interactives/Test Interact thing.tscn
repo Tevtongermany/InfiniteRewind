@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InteractionArea" parent="." instance=ExtResource("1_58j1r")]
-interaction_text_position = Vector2(-70, -50)
+interaction_text_position = -200.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("RectangleShape2D_eolmu")

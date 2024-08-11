@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bna7brt1l51j6"]
+[gd_scene load_steps=6 format=3 uid="uid://bna7brt1l51j6"]
 
 [ext_resource type="PackedScene" uid="uid://yiogxjmpl46h" path="res://Content/Actors/Player/Player.tscn" id="1_dnkr2"]
 [ext_resource type="PackedScene" uid="uid://4i2v11w88qh4" path="res://Content/Actors/Interactives/Test Interact thing.tscn" id="2_p7dbo"]
+[ext_resource type="PackedScene" uid="uid://bicif1212d2lc" path="res://Content/Actors/Interactives/Door.tscn" id="3_vlbct"]
+[ext_resource type="PackedScene" uid="uid://dpgbd6x3yq5fi" path="res://Content/Levels/TestLevel2.tscn" id="4_0lkru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0i1m2"]
 size = Vector2(631, 20)
@@ -9,7 +11,7 @@ size = Vector2(631, 20)
 [node name="Node2D" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_dnkr2")]
-position = Vector2(0, -36)
+position = Vector2(1, -39)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -18,4 +20,8 @@ position = Vector2(-3.5, 0)
 shape = SubResource("RectangleShape2D_0i1m2")
 
 [node name="TestInteractThing" parent="." instance=ExtResource("2_p7dbo")]
-position = Vector2(-112, -32)
+position = Vector2(-126, -34)
+
+[node name="Door" parent="." instance=ExtResource("3_vlbct")]
+position = Vector2(48, -41)
+to_open_scene = ExtResource("4_0lkru")

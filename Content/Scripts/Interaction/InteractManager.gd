@@ -7,7 +7,7 @@ extends Node2D
 
 const base_text = "[SPACE] to"
 
-var active_areas = []
+var active_areas: Array[InteractionArea] = []
 var can_interact = true
 
 func reg_area(area: InteractionArea):
@@ -23,7 +23,7 @@ func _process(delta):
 		active_areas.sort_custom(_sort_by_distance)
 		label.text = base_text + active_areas[0].interaction_text
 		label.global_position = active_areas[0].global_position
-		label.global_position.y = 0
+		label.global_position.y = active_areas[0].interaction_text_position
 		label.global_position.x -= label.size.x / 2
 		label.show()
 	else:
