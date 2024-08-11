@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://yiogxjmpl46h"]
+
+[ext_resource type="Script" path="res://Content/Scripts/Player/Player.gd" id="1_4hlv2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yvwqb"]
+radius = 14.0
+height = 50.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_4hlv2")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.89, 1.89)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yvwqb")
+
+[node name="ColorRect" type="ColorRect" parent="CollisionShape2D"]
+offset_left = -9.0
+offset_top = -21.0
+offset_right = 9.0
+offset_bottom = 19.0
