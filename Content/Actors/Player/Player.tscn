@@ -6,7 +6,8 @@
 radius = 14.0
 height = 50.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
 script = ExtResource("1_4hlv2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
